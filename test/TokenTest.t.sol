@@ -17,7 +17,7 @@ contract TokenTest is Test{
     uint256 public constant INITIAL_SUPPLY = 10 ether;
 
     function setUp() public {
-        DeployToken deployer = new DeployToken();
+        deployer = new DeployToken();
         token = deployer.run();
 
         vm.prank(address(msg.sender));
